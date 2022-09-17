@@ -8,14 +8,14 @@ int main() {
     double x, E1, summaN, a;
     int N;
     
-    summaN = 0
+    summaN = 0;
     
     // Для умножения и факториала
-    int iEven = factEven = 2;
-    int iOdd = factOdd = 1;
+    int iEven, factEven;
+    int iOdd, factOdd;
     
-    // факториал?
-    int fact = 1;
+    iEven = factEven = 2;
+    iOdd = factOdd = 1;
     
     std::cout << "Введите x, N, E через enter" << "\n";
     std::cin >> x >> N >> E1;
@@ -26,13 +26,13 @@ int main() {
             factOdd *= (i+1);
             a = pow(-1, i)*pow(cos(x), i/2.0)*iOdd/factOdd;
             summaN += a;
-            continue
+            continue;
         }
         if(i == 2){
             factEven *= (i+1);
             a = pow(-1, i)*pow(cos(x), i/2.0)*iEven/factEven;
             summaN += a;
-            continue
+            continue;
         }
         
         if(i % 2 != 0 && i > 1){
@@ -49,9 +49,11 @@ int main() {
         }
     }
     
-    double summaE1 = summaE2 = 0;
-    int count1 = count2 = 0;
+    double summaE1, summaE2;
+    int count1, count2;
     int i = 0;
+    summaE1 = summaE2 = 0;
+    count1 = count2 = 0;
     a = 0;
     
     // Возвращаю к исходному
@@ -90,7 +92,7 @@ int main() {
     
     double E2 = E1*10;
     
-    int i = 0;
+    i = 0;
     a = 0;
     
     // Возвращаю к исходному
